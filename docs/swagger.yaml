@@ -1,0 +1,26 @@
+info:
+  contact:
+    email: suzukaze.hazuki2020@gmail.com
+    name: Evan
+    url: https://lantron.ltd
+  description: This is translator api for lantron ltd.
+  termsOfService: https://github.com/lantron ltd-jp
+  title: myetc-api
+  version: 1.0.0
+paths:
+  /api/v1/config:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: 获取客户端所需配置(v1.2.0)
+      tags:
+      - App管理
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

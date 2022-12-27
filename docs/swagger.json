@@ -1,0 +1,38 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is translator api for lantron ltd.",
+        "title": "myetc-api",
+        "termsOfService": "https://github.com/lantron ltd-jp",
+        "contact": {
+            "name": "Evan",
+            "url": "https://lantron.ltd",
+            "email": "suzukaze.hazuki2020@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/v1/config": {
+            "get": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "App管理"
+                ],
+                "summary": "获取客户端所需配置(v1.2.0)",
+                "responses": {}
+            }
+        }
+    },
+    "securityDefinitions": {
+        "ApiKeyAuth": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
+    }
+}

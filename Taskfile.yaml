@@ -1,0 +1,29 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task swag
+
+  swag:
+    cmds:
+      - go install github.com/swaggo/swag/cmd/swag@latest
+      - swag init -g cmd/api/main.go && go mod tidy
+
+  fmt:
+    cmds:
+      - goimports -w .
+  all:
+    cmds:
+      - task swag
+      - task fmt
+
+  ent_add:
+    cmds:
+      - go run -mod=mod entgo.io/ent/cmd/ent init ETCRecord
+
+  ent_generate:
+    cmds:
+      - go generate ./ent
